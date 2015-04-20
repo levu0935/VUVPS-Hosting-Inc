@@ -1,0 +1,17 @@
+<VirtualHost *:80>
+SuexecUserGroup vuvps vuvps
+ServerAdmin     info@vuvps.com
+ServerName      www.vuvps.com
+ServerAlias     vuvps.com
+DocumentRoot    /var/www/vuvps/public_html
+ErrorLog        /var/www/vuvps/log/error.log
+CustomLog       /var/www/vuvps/log/access.log combined
+<Directory      /var/www/vuvps/public_html>
+        Options         Indexes FollowSymLinks ExecCGI
+        DirectoryIndex  index.html index.php
+        AddHandler      fcgid-script php
+        FcgidWrapper    /home/vuvps/fcgid
+        AllowOverride   All
+        Require         all granted
+</Directory>
+</VirtualHost>
