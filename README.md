@@ -1,2 +1,2 @@
-# vuvps
-Repo này chứa các code demo trên blog VuVPS
+#VUVPS Source Code
+Các lệnh và source code trong các bài hướng dẫn tại www.vuvps.com
